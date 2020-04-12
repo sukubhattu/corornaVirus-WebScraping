@@ -39,6 +39,8 @@ tables = covidMainRows.find('table', id= 'main_table_countries_today')
 rows = tables.find_all('tr')
 
 
+nepal = rows.find_all('a', class_ = 'mt_a', string=lambda text: 'nepal' in text.lower())
+
 # now access each element of rows
 for row in rows:
     country = row.find('a', class_ = 'mt_a')
